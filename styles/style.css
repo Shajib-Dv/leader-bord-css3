@@ -19,10 +19,47 @@ main {
 .container {
   width: 870px;
   padding: 30px;
-  margin: 0 auto;
+  margin: 36px auto;
   background-color: #ffffff;
   border-radius: 5px;
 }
+/* common style end */
+
+/*----------
+header section
+ ------------*/
+.nav {
+  width: 100vw;
+  height: 94px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #562eff;
+}
+.left-side-nav {
+  display: flex;
+  gap: 16px;
+}
+.left-side-nav h1 {
+  color: #ffffff;
+  font-size: 24px;
+}
+.left-side-nav img {
+  height: 51px;
+  width: 40px;
+}
+
+.right-side-nav ul {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  list-style: none;
+}
+.right-side-nav li {
+  color: #ffffff;
+  font-size: 16px;
+}
+
 /* top players and top blog */
 .players {
   display: grid;
@@ -134,4 +171,87 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer {
+  width: 100vw;
+  height: 8vw;
+  background: #1e1e1e;
+  font-size: 3vw;
+  padding: 5%;
+  color: #ffffff;
+}
+
+/* Style for small device */
+
+@media screen and (max-width: 576px) {
+  .nav {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 5px 0;
+  }
+
+  .container {
+    width: auto;
+    margin: 0;
+  }
+
+  .players {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .player-name {
+    font-size: 12px;
+  }
+  .blogs,
+  .course-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+  .course-box {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+/* Style for medium device */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .nav {
+    width: 100vw;
+  }
+
+  .container {
+    width: auto;
+    margin: 0;
+  }
+
+  .players {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .player-name {
+    font-size: 16px;
+  }
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .course-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+  .course-box {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
